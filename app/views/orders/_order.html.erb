@@ -5,7 +5,7 @@
   <td> <%= item.product.name %> </td>
   <td> <%= item.product.description %> </td>
   <td> <%= item.quantity %> </td>
-  <td> <%= item.total_price_cents %> </td>
+  <td> <%= humanized_money_with_symbol item.total_price_cents/100 %> </td>
 </tr>
 
 <% end %>
