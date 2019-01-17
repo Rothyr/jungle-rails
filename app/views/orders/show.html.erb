@@ -6,6 +6,29 @@
 
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
+    <%= @order.email %>
+    <br >
+    <%= humanized_money_with_symbol @order.total_cents/100 %>
+  </div>
+
+  <div class="panel panel-default products">
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Image: </th>
+          <th>Name: </th>
+          <th>Description: </th>
+          <th>Quantity: </th>
+          <th>Price :</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render "order" %>
+      </tbody>
+    </table>
+  <br >
+  <br >
   </div>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
