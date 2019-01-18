@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
 
+  
   def show
     @order = Order.find(params[:id])
   end
@@ -15,6 +16,7 @@ class OrdersController < ApplicationController
     else
       redirect_to cart_path, flash: { error: order.errors.full_messages.first }
     end
+  end
 
   rescue Stripe::CardError => e
     redirect_to cart_path, flash: { error: e.message }
@@ -23,7 +25,7 @@ class OrdersController < ApplicationController
   private
 
   def empty_cart!
-    # empty hash means no products in cart :)
+    
     update_cart({})
   end
 

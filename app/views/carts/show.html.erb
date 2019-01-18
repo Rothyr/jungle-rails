@@ -4,6 +4,10 @@
     <h1>My Cart</h1>
   </header>
 
+  <% if cart.size == 0%>
+  <h2> Your cart is empty!</h2>
+  <%= link_to "Home", root_path %>
+  <% else %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -34,6 +38,7 @@
 
   <div class="row">
     <div class="col-xs-12">
+    
       <%= form_tag orders_path do %>
         <script
           src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -48,5 +53,6 @@
       <% end %>
     </div>
   </div>
+  <% end %>
 
 </section>
