@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+
+    <div class="order-summary jumbotron">
+      <h4>Thank you for your order!</h4>
+    <p>
+      You have successfully placed an order on Jungle for:,
+    </p>
+    </div>
+
+    <div class="panel panel-default products">
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Image: </th>
+          <th>Name: </th>
+          <th>Description: </th>
+          <th>Quantity: </th>
+          <th>Price :</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render "mail" %>
+      </tbody>
+    </table>
+  </div>
+
+    <p>Have a great day!</p>
+  </body>
+</html>
