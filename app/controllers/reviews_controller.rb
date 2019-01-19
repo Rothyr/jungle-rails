@@ -13,15 +13,14 @@ class ReviewsController < ApplicationController
 
       if @review.save!
         flash[:notice] = "Review successfully saved!"
-        redirect_to product_path (@review.product_id)
+        redirect_to product_path(@review.product_id)
       else
         flash[:notice] = "Error creating review"
-        redirect_to product_path (@review.product_id)
+        redirect_to product_path(@review.product_id)
       end
   end
 
   def destroy
-    flash[:notice]
     @review = Review.find(params[:id])
     product = @review.product
     @review.destroy!
