@@ -132,5 +132,83 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+## REVIEWS
+
+prod1 = Product.find_by! name: 'Optimal Sleeping Bed' 
+prod2 = Product.find_by! name: 'Red Bookshelf' 
+prod3 = Product.find_by! name: 'Modern Skateboards' 
+
+prod1.reviews.create!({
+  user_id: rand(1...2),
+  description: Faker::Hacker.say_something_smart,
+  rating: rand(1...5)
+})
+
+prod1.reviews.create!({
+  user_id: rand(1...2),
+  description: Faker::Hacker.say_something_smart,
+  rating: rand(1...5)
+})
+
+prod1.reviews.create!({
+  user_id: rand(1...2),
+  description: Faker::Hacker.say_something_smart,
+  rating: rand(1...5)
+})
+
+prod1.reviews.create!({
+  user_id: rand(1...2),
+  description: Faker::Hacker.say_something_smart,
+  rating: rand(1...5)
+})
+
+prod2.reviews.create!({
+  user_id: rand(1...2),
+  description: Faker::Hacker.say_something_smart,
+  rating: rand(1...5)
+})
+
+prod2.reviews.create!({
+  user_id: rand(1...2),
+  description: Faker::Hacker.say_something_smart,
+  rating: rand(1...5)
+})
+
+prod2.reviews.create!({
+  user_id: rand(1...2),
+  description: Faker::Hacker.say_something_smart,
+  rating: rand(1...5)
+})
+
+prod2.reviews.create!({
+  user_id: rand(1...2),
+  description: Faker::Hacker.say_something_smart,
+  rating: rand(1...5)
+})
+
+prod3.reviews.create!({
+  user_id: rand(1...2),
+  description: Faker::Hacker.say_something_smart,
+  rating: rand(1...5)
+})
+
+prod3.reviews.create!({
+  user_id: rand(1...2),
+  description: Faker::Hacker.say_something_smart,
+  rating: rand(1...5)
+})
+
+prod3.reviews.create!({
+  user_id: rand(1...2),
+  description: Faker::Hacker.say_something_smart,
+  rating: rand(1...5)
+})
+
+prod3.reviews.create!({
+  user_id: rand(1...2),
+  description: Faker::Hacker.say_something_smart,
+  rating: rand(1...5)
+})
+
 
 puts "DONE!"

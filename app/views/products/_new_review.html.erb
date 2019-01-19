@@ -1,0 +1,17 @@
+<%= form_for [@product, @review] do |form| %>
+
+<div class="card" style="width:50%">        
+  <div class="card-header"> Leave a review!</div>
+
+  <ul class="list-group list-group-flush">
+
+    <li class="list-group-item">
+      <dt> Your Review: <%= form.text_area :description %> </dt>
+      <dt>Rating: <%= form.select :rating, [1,2,3,4,5] %></dt>
+      <%= form.submit 'Submit', class: 'btn btn-primary' %>
+    </li>
+
+  </ul>
+
+</div>
+<% end %>

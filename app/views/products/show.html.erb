@@ -14,6 +14,7 @@
 
       <div class="col-sm-8">
         <dl class="dl-horizontal">
+        <!-- Product Description-->
           <dt>Name</dt>
           <dd><%= @product.name %></dd>
           <dt>Description</dt>
@@ -23,7 +24,19 @@
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
         </dl>
+
       </div>
+    </div>
+
+    <br >
+    <br >
+    <%= render 'new_review' %>
+
+    <br >
+    <br >
+    
+    <div class="card" style="width:50%">        
+      <%= render 'review' %>
     </div>
 
   </article>

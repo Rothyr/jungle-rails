@@ -1,0 +1,18 @@
+      <div class="card-header"> Previous Reviews:
+      </div>
+      <ul class="list-group list-group-flush">
+        <!-- Product Review-->
+        <% @product.reviews.order('created_at desc').each do |item| %>
+          <li class="list-group-item">
+          <dt>Name:</dt>
+          <dd><%= item.user.first_name %></dd>
+          <dt>Review:</dt>
+          <dd><%= item.description %></dd>
+          <dt>Rating:</dt>
+          <dd><%= item.rating %></dd>
+            <% if item.user == current_user %>
+              <%= link_to 'Delete Review', review_path(item.id), class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
+          </li>
+
+        <% end %>
