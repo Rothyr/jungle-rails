@@ -60,7 +60,7 @@ group :production do
   gem 'rails_12factor'
 end
 
-group :test do
+group :test do 
   gem 'capybara'
   gem 'poltergeist'
   gem 'database_cleaner'
