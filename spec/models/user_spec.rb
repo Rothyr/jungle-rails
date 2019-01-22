@@ -54,6 +54,7 @@ RSpec.describe User, type: :model do
         password: '12345678',
         password_confirmation: '12345678'
       )
+
       expect(user2).to_not be_valid
     end
 
@@ -67,7 +68,7 @@ RSpec.describe User, type: :model do
       it 'is valid when correct credentials provided' do 
         @user.save
 
-      expect(User.authenticate_with_credentials('email@email.com', '12345678')).to_not be_nil
+        expect(User.authenticate_with_credentials('email@email.com', '12345678')).to_not be_nil
       end
 
       it 'is valid with uppercase email address' do
