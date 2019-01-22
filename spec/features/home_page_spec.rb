@@ -24,7 +24,7 @@ before :each do
     visit root_path
 
 
-    save_screenshot
+    # save_screenshot
 
     expect(page).to have_css 'article.product', count: 10
     
